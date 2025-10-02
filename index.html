@@ -3,7 +3,9 @@
   <head>
     <title>Aksht</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 
     <meta name="description" content="">
     <meta name="keywords" content="html, css, javascript, jquery">
@@ -20,10 +22,35 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+    .portfolio-item img {
+  width: 100%;          /* make it responsive to column width */
+  height: 250px;        /* fix height (adjust as needed) */
+  object-fit: cover;    /* crop nicely instead of squishing */
+  border-radius: 25px;  /* optional: rounded corners */
+}
+
+  </style>
   </head>
 
-  <!-- body section -->
+  <!-- body section --> 
   <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <script>
+  // Block zoom with Ctrl + scroll
+  document.addEventListener("wheel", function (e) {
+    if (e.ctrlKey) e.preventDefault();
+  }, { passive: false });
+
+  // Block zoom with Ctrl + keys (+/-)
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=')) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+
 
     <nav class="unslate_co--site-mobile-menu">
       <div class="close-wrap d-flex">
@@ -106,8 +133,8 @@
       <!-- END nav -->
 
       <!-- title text section -->
-      <!-- <div class="cover-v1 jarallax" style="background-image: url('images/cover_bg_2.jpg');" id="home-section"> -->
-      <div class="cover-v1 jarallax" id="home-section">
+      <div class="cover-v1 jarallax" style="background-image: url('images/home\ page\ 3.png');" id="home-section">
+      <!-- <div class="cover-v1 jarallax" id="home-section"> -->
         <div class="cover-v1 jarallax" id="home-section"></div>
         <div class="container">
           <div class="row align-items-center">
@@ -133,6 +160,9 @@
       <!-- END .cover-v1 -->
 
 
+      
+
+
       <div class="unslate_co--section" id="portfolio-section">
         <div class="container">
           
@@ -148,21 +178,19 @@
               <a href="#" class="text-white js-filter d-inline-block d-lg-none">Filter</a>
               
               <div class="filter-wrap">
-                <div class="filter ml-auto" id="filters">
+                <!-- <div class="filter ml-auto" id="filters">
                   <a href="#" class="active" data-filter="*">All</a>
                   <a href="#" data-filter=".web">Shoot and edit</a>
                   <a href="#" data-filter=".branding">Branding</a>
                   <a href="#" data-filter=".illustration">Events</a>
                   <a href="#" data-filter=".packaging">Personlize shoot</a>
-                </div>
+                </div> -->
               </div> 
             </div>
-
-
             
             <div id="posts" class="row gutter-isotope-item">
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="portfolio-single-1.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+              <!-- <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/suzuki 1.mp4" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
                       <div class="portfolio-item-content">
@@ -172,9 +200,25 @@
                     </div>
                     <img src="images/Suzuki Scooter 1.jpg" class="lazyload  img-fluid" alt="Images" />
                   </a>
+              </div> -->
+
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/suzuki 1.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Showroom Reel</h3>
+                        <p>Video, branding</p>
+                      </div>
+                    </div>
+                    <img src="images/Suzuki Scooter 1.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
               </div>
-              <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
-                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
+
+
+
+              <!-- <div class="item branding packaging illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2 ">
+                <a href="./Videos/painting ex.mp4" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="3">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
                       <div class="portfolio-item-content">
@@ -184,9 +228,22 @@
                     </div>
                     <img src="images/Painting Exibition 2.jpg" class="lazyload  img-fluid" alt="Images" />
                   </a>
+              </div> -->
+
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/painting ex.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Exibition Shoot</h3>
+                        <p>branding, Event Reel, illustration</p>
+                      </div>
+                    </div>
+                    <img src="images/Painting Exibition 2.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
               </div>
 
-              <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <!-- <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="portfolio-single-4.html" class="portfolio-item isotope-item gsap-reveal-img ajax-load-page" data-id="4">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -197,11 +254,24 @@
                     </div>
                     <img src="images/Re 350 3.jpg" class="lazyload  img-fluid" alt="Images" />
                   </a>
+              </div> -->
+
+            <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/Re bullet.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Bike Shoot</h3>
+                        <p>Edit, Reel</p>
+                      </div>
+                    </div>
+                    <img src="images/Re 350 3.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
               </div>
 
-              <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
 
-                <a href="images/work_4_full.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Watch">
+              <!-- <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/Re bullet.mov" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Watch">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
@@ -211,11 +281,38 @@
                     </div>
                     <img src="images/gt airlines 4.jpg" class="lazyload  img-fluid" alt="Images" />
                   </a>
+              </div> -->
 
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/gt single.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Bike Shoot</h3>
+                        <p>Edit, Reel</p>
+                      </div>
+                    </div>
+                    <img src="images/gt airlines 4.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
               </div>
 
-              <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+
+              
+              <!-- <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="images/work_5_md.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Shoe Rebranding">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Festival Shoot</h3>
+                        <p>Event/Festival Reel</p>
+                      </div>
+                    </div>
+                    <img src="images/ganpati 5.jpg" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div> -->
+
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/ganpati reel.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
@@ -227,7 +324,7 @@
                   </a>
               </div>
 
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <!-- <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="portfolio-single-2.html" class="portfolio-item ajax-load-page item-portrait isotope-item gsap-reveal-img" data-id="2">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
@@ -238,9 +335,22 @@
                     </div>
                     <img src="images/nikhita 1.png" class="lazyload  img-fluid" alt="Images" />
                   </a>
+              </div> -->
+
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/nikhita.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>Influencer Shoot</h3>
+                        <p>professional Showcase, Reel</p>
+                      </div>
+                    </div>
+                    <img src="images/nikhita 1.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
               </div>
 
-              <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+              <!-- <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="images/work_7_a_md.jpg" class="portfolio-item item-portrait isotope-item gsap-reveal-img " data-fancybox="gallery" data-caption="Modern Building">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
@@ -253,10 +363,23 @@
                     </div>
                     <img src="images/bike shoot 1.png" class="lazyload  img-fluid" alt="Images" />
                   </a>
+              </div> -->
+
+              <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="./Videos/gt helmet.mp4" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-photo2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>bike shoot reel</h3>
+                        <p>professional Instagram Reel</p>
+                      </div>
+                    </div>
+                    <img src="images/bike shoot 1.png" class="lazyload  img-fluid" alt="Images" />
+                  </a>
               </div>
 
               <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Showreel 2019">
+                <a href="https://youtu.be/hzS_XIjyfHo?si=Z9aVji8jisxcpdRb" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
                     <div class="overlay">
                       <span class="wrap-icon icon-play_circle_filled"></span>
                       <div class="portfolio-item-content">
@@ -268,8 +391,10 @@
                   </a>
               </div>
 
+
+
               <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="images/work_9_a_md.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Render Packaging">
+                <a href="https://youtu.be/wjVb32R4r1Y?si=_pdWsqaMay39SszS" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Akshtdigital">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
@@ -339,7 +464,9 @@
 by<a href="#"> innovation </a> and results.</p>
               <p class="mb-4 gsap-reveal">Our passionate team blends storytelling, design, and programming to deliver professional 
 solutions across.</p>
-              <p class="gsap-reveal"><a href="./Doc/6th result.pdf" class="btn btn-outline-pill btn-custom-light">Download 
+
+                <!-- pdf file in href -->
+              <p class="gsap-reveal"><a href="./Doc/Untitled design.pdf" class="btn btn-outline-pill btn-custom-light">Download 
 brochure</a></p>
             </div>
           </div>
@@ -415,6 +542,92 @@ brochure</a></p>
         </div>
       </div>
 
+
+     
+
+<div class="container bootdey py-5">
+    <!-- <div class="row">
+        <div class="col-12 text-center">
+            <div class="section-title mb-4 pb-2">
+                <h4 class="title mb-4">Our Business Minds</h4>
+                <p class="text-muted para-desc mx-auto mb-0">
+                    Dream. Build. Lead.
+                </p>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Our Business Minds</span></h2>
+            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+          </div>
+
+    <div class="row justify-content-center text-center">
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-10 mt-4 pt-2">
+            <div class="team rounded p-3 py-4 shadow">
+                <img src="./images/IMG_5174.JPG" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Divya Parmar</h4>
+                    <small class="text-muted">Co-Founder</small>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-10 mt-4 pt-2">
+            <div class="team rounded p-3 py-4 shadow">
+                <img src="./images/WhatsApp Image 2025-09-30 at 14.21.06_b66a3f3b.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Parth Navadiya</h4>
+                    <small class="text-muted">C.E.O. , Founder</small>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <!-- <div class="col-lg-3 col-md-6 col-sm-10 mt-4 pt-2">
+            <div class="team rounded p-3 py-4 shadow">
+                <img src="./images/WhatsApp Image 2025-10-01 at 13.22.29_9db1365f (2).jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Devam Barad</h4>
+                    <small class="text-muted">Co-Founder</small>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </div><!--end row-->
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+
+
       <div class="unslate_co--section section-counter" id="skills-section">
         <div class="container">
           <div class="section-heading-wrap text-center mb-5">
@@ -431,7 +644,7 @@ brochure</a></p>
                   <span class="append-text">%</span> -->
                 </span>
                 <!-- <span class="counter-label">Shooting</span> -->
-                 <h2>Video/Photo Shooting</h2>
+                 <h4>Video/Photo Shooting</h4>
               </div>
             </div>
             
@@ -441,7 +654,7 @@ brochure</a></p>
                   <!-- <span class="number number-counter" data-number="99">0</span>
                   <span class="append-text">%</span> -->
                 </span>
-                <h2>Video Editing</h2>
+                <h4>Video Editing</h4>
               </div>
             </div>
             <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
@@ -451,7 +664,7 @@ brochure</a></p>
                   <span class="append-text">%</span> -->
                 </span>
                 <!-- <span class="counter-label">Social Media Handling</span> -->
-                <h2>Social Media Handling</h2>
+                <h4>Social Media Handling</h4>
               </div>
             </div>
             <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
@@ -461,7 +674,7 @@ brochure</a></p>
                   <span class="append-text">%</span> -->
                 </span>
                 <!-- <span class="counter-label">Web Development</span> -->
-                <h2>Web Development</h2>
+                <h4>Web Development</h4>
               </div>
             </div>
           </div>
@@ -705,7 +918,7 @@ expectations.
                 <script>
                   document.write(new Date().getFullYear());
                 </script> All rights reserved | This Website is Made With <i class="icon-heart"
-                  aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"><b>Nios - By Devam Barad</a>
+                  aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"><b>Aksht</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               
               </p>
